@@ -85,7 +85,7 @@ def start_record_meeting(intent,session):
     card_title = intent['name']
     session_attributes = {}
     should_end_session = False
-    speech_output = "Recordiong meeting."+\
+    speech_output = "Recording meeting."+\
                 "Starting now."
     reprompt_text = None
     return build_response(session_attributes, build_speechlet_response(
