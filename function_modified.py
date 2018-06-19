@@ -68,8 +68,8 @@ def start_record_intent(intent,session):
     session_attributes = {}
     should_end_session = False
     if 'STARTED' in intent['dialogState']:
-        return build_response(session_attributes,build_conversation(hould_end_session))
-    else 'COMPLETED' in intent['dialogState']:
+        return build_response(session_attributes,build_conversation(should_end_session))
+    elif 'COMPLETED' in intent['dialogState']:
         if 'Meeting' in intent['slots']:
             speech_output = "Recording Meeting."+\
                             " Starting now."
